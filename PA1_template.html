@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+<meta name="author" content="Jorge A Diaz Infante" />
+
+
+<title>RepData_PeerAssesment1</title>
+
+<script src="data:application/x-javascript,%2F%2A%21%20jQuery%20v1%2E11%2E0%20%7C%20%28c%29%202005%2C%202014%20jQuery%20Foundation%2C%20Inc%2E%20%7C%20jquery%2Eorg%2Flicense%20%2A%2F%0A%21function%28a%2Cb%29%7B%22object%22%3D%3Dtypeof%20module%26%26%22object%22%3D%3Dtypeof%20module%2Eexports%3Fmodule%2Eexports%3Da%2Edocument%3Fb%28a%2C%210%29%3Afunction%28a%29%7Bif%28%21a%2Edocument%29throw%20new%20Error%28%22jQuery%20requires%20a%20window%20with%20a%20document%22%29%3Breturn%20b%28a%29%7D%3Ab%28a%29%7D%28%...(line truncated)...
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="data:text/css,%2F%2A%21%0A%20%2A%20Bootstrap%20v2%2E3%2E2%0A%20%2A%0A%20%2A%20Copyright%202013%20Twitter%2C%20Inc%0A%20%2A%20Licensed%20under%20the%20Apache%20License%20v2%2E0%0A%20%2A%20http%3A%2F%2Fwww%2Eapache%2Eorg%2Flicenses%2FLICENSE%2D2%2E0%0A%20%2A%0A%20%2A%20Designed%20and%20built%20with%20all%20the%20love%20in%20the%20world%20by%20%40mdo%20and%20%40fat%2E%0A%20%2A%2F%2Eclearfix%7B%2Azoom%3A1%7D%2Eclearfix%3Abefore%2C%2Eclearfix%3Aafter%7Bdisplay%3Atable%3Bline%2Dheight%3A0%3Bcontent%3A...(line truncated)...
+<link href="data:text/css,%2F%2A%21%0A%20%2A%20Bootstrap%20Responsive%20v2%2E3%2E2%0A%20%2A%0A%20%2A%20Copyright%202013%20Twitter%2C%20Inc%0A%20%2A%20Licensed%20under%20the%20Apache%20License%20v2%2E0%0A%20%2A%20http%3A%2F%2Fwww%2Eapache%2Eorg%2Flicenses%2FLICENSE%2D2%2E0%0A%20%2A%0A%20%2A%20Designed%20and%20built%20with%20all%20the%20love%20in%20the%20world%20by%20%40mdo%20and%20%40fat%2E%0A%20%2A%2F%2Eclearfix%7B%2Azoom%3A1%7D%2Eclearfix%3Abefore%2C%2Eclearfix%3Aafter%7Bdisplay%3Atable%3Bline%2Dheight%3A0...(line truncated)...
+<script src="data:application/x-javascript,%2F%2A%21%0A%2A%20Bootstrap%2Ejs%20by%20%40fat%20%26%20%40mdo%0A%2A%20Copyright%202013%20Twitter%2C%20Inc%2E%0A%2A%20http%3A%2F%2Fwww%2Eapache%2Eorg%2Flicenses%2FLICENSE%2D2%2E0%2Etxt%0A%2A%2F%0A%21function%28e%29%7B%22use%20strict%22%3Be%28function%28%29%7Be%2Esupport%2Etransition%3Dfunction%28%29%7Bvar%20e%3Dfunction%28%29%7Bvar%20e%3Ddocument%2EcreateElement%28%22bootstrap%22%29%2Ct%3D%7BWebkitTransition%3A%22webkitTransitionEnd%22%2CMozTransition%3A%22transitio...(line truncated)...
+
+<style type="text/css">code{white-space: pre;}</style>
+<link href="data:text/css,pre%20%2Eoperator%2C%0Apre%20%2Eparen%20%7B%0A%20color%3A%20rgb%28104%2C%20118%2C%20135%29%0A%7D%0A%0Apre%20%2Eliteral%20%7B%0A%20color%3A%20%23990073%0A%7D%0A%0Apre%20%2Enumber%20%7B%0A%20color%3A%20%23099%3B%0A%7D%0A%0Apre%20%2Ecomment%20%7B%0A%20color%3A%20%23998%3B%0A%20font%2Dstyle%3A%20italic%0A%7D%0A%0Apre%20%2Ekeyword%20%7B%0A%20color%3A%20%23900%3B%0A%20font%2Dweight%3A%20bold%0A%7D%0A%0Apre%20%2Eidentifier%20%7B%0A%20color%3A%20rgb%280%2C%200%2C%200%29%3B%0A%7D%0A%0Apre%2...(line truncated)...
+<script src="data:application/x-javascript,%0Avar%20hljs%3Dnew%20function%28%29%7Bfunction%20m%28p%29%7Breturn%20p%2Ereplace%28%2F%26%2Fgm%2C%22%26amp%3B%22%29%2Ereplace%28%2F%3C%2Fgm%2C%22%26lt%3B%22%29%7Dfunction%20f%28r%2Cq%2Cp%29%7Breturn%20RegExp%28q%2C%22m%22%2B%28r%2EcI%3F%22i%22%3A%22%22%29%2B%28p%3F%22g%22%3A%22%22%29%29%7Dfunction%20b%28r%29%7Bfor%28var%20p%3D0%3Bp%3Cr%2EchildNodes%2Elength%3Bp%2B%2B%29%7Bvar%20q%3Dr%2EchildNodes%5Bp%5D%3Bif%28q%2EnodeName%3D%3D%22CODE%22%29%7Breturn%20q%7Dif%28%2...(line truncated)...
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+</head>
+
+<body>
+
+<style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="container-fluid main-container">
+
+
+<div id="header">
+<h1 class="title">RepData_PeerAssesment1</h1>
+<h4 class="author"><em>Jorge A Diaz Infante</em></h4>
+<h4 class="date"><em>Tuesday, April 14, 2015</em></h4>
+</div>
+
+
+<p>Loading and preprocessing the data</p>
+<pre class="r"><code>data &lt;- read.csv(&quot;./data/activity.csv&quot;)</code></pre>
+<p>What is the mean and median total number of steps taken per day? Make a Histogram of the total numbers of steps taken each day</p>
+<pre class="r"><code>steps &lt;- tapply(data$steps, data$date, FUN = sum, na.rm = TRUE)
+hist(steps)</code></pre>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABUAAAAPACAMAAADDuCPrAAAAZlBMVEUAAAAAADoAAGYAOjoAOmYAOpAAZpAAZrY6AAA6OgA6Ojo6kNtmAABmOgBmOpBmZgBmZmZmtv+QOgCQkNuQtpCQ29uQ2/+2ZgC2///bkDrb25Db/9vb////tmb/25D//7b//9v///8qN//HAAAACXBIWXMAAB2HAAAdhwGP5fFlAAAgAElEQVR4nO3dbWPaWLsdYGdOp0mb6Uum7XjcjjPJ//+TBQxGIBGb7S2z7+Xr+nCehDGYpX2fFYGEuPsJQJO7Wz8BgKoUKEAjBQrQSIECNFKgAI0UKEAjBQrQSIECNFKgAI0UKEAjBQrQSIECNFKgAI0UKEAjBQrQSIECNFKgAI0UKEAjBQrQSIECNFKgAI0UKEAjBQrQSIECNFKgAI0UKEAjBQrQSIECNFKgAI0UKEAjBQrQSIECNFKgA...(line truncated)...
+<pre class="r"><code>mean(steps, na.rm = TRUE)</code></pre>
+<pre><code>## [1] 9354.23</code></pre>
+<pre class="r"><code>median(steps, na.rm = TRUE)</code></pre>
+<pre><code>## [1] 10395</code></pre>
+<p>What is the average daily activity patter?</p>
+<pre class="r"><code>avg_int &lt;- aggregate(x = list(steps = data$steps), by = list(interval = data$interval), FUN = mean, na.rm = TRUE)
+plot(avg_int$interval, avg_int$steps, type=&quot;l&quot;, xlab= &quot;5 Min Interval&quot;, ylab= &quot;Avg of Steps&quot;)</code></pre>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABUAAAAPACAMAAADDuCPrAAAAZlBMVEUAAAAAADoAAGYAOjoAOpAAZpAAZrY6AAA6OgA6kLY6kNtmAABmZjpmZmZmtrZmtv+QOgCQkNuQtpCQ29uQ2/+2ZgC2tma225C2///bkDrbtmbb/9vb////tmb/25D//7b//9v////nf32bAAAACXBIWXMAAB2HAAAdhwGP5fFlAAAgAElEQVR4nO3dC5ebyNqYUc1kYn+xk9hJjpLp5LTH+v9/MroLBJKguFS9pb3XOWvsbokGqnmMAKHNDoAkm9wzABCVgAIkElCARAIKkEhAARIJKEAiAQVIJKAAiQQUIJGAAiQSUIBEAgqQSEABEgkoQCIBBUgkoACJBBQgkYACJBJQgEQCCpBIQAESCShAIgEFSCSgAIkEFCCRgAIkElCARAIKkEhAARIJKEAiAQVIJKAAiQQUIJGAAiQSU...(line truncated)...
+<p>Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?</p>
+<pre class="r"><code>avg_int[which.max(avg_int$steps),]</code></pre>
+<pre><code>##     interval    steps
+## 104      835 206.1698</code></pre>
+<p>Imputing missing values</p>
+<p>Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NAs)</p>
+<pre class="r"><code>sum(is.na(data$steps))</code></pre>
+<pre><code>## [1] 2304</code></pre>
+<p>Devise a strategy for filling in all of the missing values in the dataset.</p>
+<pre class="r"><code>avg5 &lt;- function(steps, interval) 
+{
+    filling &lt;- NA
+    if (is.na(steps)) 
+    filling &lt;- (avg_int[avg_int$interval == interval, &quot;steps&quot;])   
+    else filling &lt;- c(steps) 
+    return(filling)
+}</code></pre>
+<p>Create a new dataset that is equal to the original dataset but with the missing data filled in.</p>
+<pre class="r"><code>data_filled &lt;- data
+data_filled$steps &lt;- mapply(avg5, data_filled$steps, data_filled$interval)</code></pre>
+<p>Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day.</p>
+<pre class="r"><code>data_filled2 &lt;- tapply(data_filled$steps, data_filled$date, FUN = sum, na.rm = TRUE)
+hist(data_filled2)</code></pre>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABUAAAAPACAMAAADDuCPrAAAAb1BMVEUAAAAAADoAAGYAOjoAOpAAZmYAZpAAZrY6AAA6OgA6Ojo6ZmY6kJA6kLY6kNtmAABmOpBmZgBmtv+QOgCQkNuQtpCQ29uQ2/+2ZgC2kDq2///bkDrb25Db/7bb/9vb////tmb/25D//7b//9v////gJEWnAAAACXBIWXMAAB2HAAAdhwGP5fFlAAAgAElEQVR4nO3da4Pa2rKdYew46d65tE/ayTFnkcS07f//G4O4TmlOGlSUUNXQ+3zZe7XbwKBqjSVuYvUXAGCymvsGAEBWFCgAGFGgAGBEgQKAEQUKAEYUKAAYUaAAYESBAoARBQoARhQoABhRoABgRIECgBEFCgBGFCgAGFGgAGBEgQKAEQUKAEYUKAAYUaAAYESBAoARBQoARhQoABhRoABgRIECgBEFCgBGFCgAGFGgA...(line truncated)...
+<pre class="r"><code>mean(data_filled2, na.rm = TRUE)</code></pre>
+<pre><code>## [1] 10766.19</code></pre>
+<pre class="r"><code>median(data_filled2, na.rm = TRUE)</code></pre>
+<pre><code>## [1] 10766.19</code></pre>
+<p>Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps? YES, Median and Mean are higer now that we use the average of the 5 min interval instead of NA (0)</p>
+<p>Are there differences in activity patterns between weekdays and weekends?</p>
+<p>Create a new factor variable in the dataset with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.</p>
+<pre class="r"><code>weekday &lt;- function(date) 
+{
+    day &lt;- weekdays(date)
+    if (day %in% c(&quot;Saturday&quot;, &quot;Sunday&quot;)) 
+        return(&quot;weekend&quot;) else  
+        return(&quot;weekday&quot;) 
+}
+data_filled$date &lt;- as.Date(data_filled$date)
+data_filled$day &lt;- sapply(data_filled$date, FUN = weekday)</code></pre>
+<p>Make a panel plot containing a time series plot (i.e. type = “l”) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).</p>
+<pre class="r"><code>avg_int_day &lt;- aggregate(steps ~ interval + day, data = data_filled, mean)
+library(ggplot2)
+ggplot(avg_int_day, aes(interval, steps)) + geom_line() + facet_grid(day ~ .) + xlab(&quot;5 Min Interval&quot;) + ylab(&quot;Steps&quot;)</code></pre>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABUAAAAPACAMAAADDuCPrAAAA7VBMVEUAAAAAAC4AADoAAFIAAGYALnMAOjoAOpAAUpEAZrYuAAAuc686AAA6OgA6kLY6kNtSAABSLnNSc3NSkcxmAABmZjpmZmZmtrZmtv9zLgBzr8x/f39/f5V/f6t/lat/lcF/q9aQOgCQkNuQtpCQ2/+RUgCRzMyVf3+VlcGVweurf3+rlX+r1v+vcy6vc3OvzMy2ZgC2tma225C2///BlX/B6//MkVLMr3PMzJHMzK/MzMzWq3/W/9bW///bkDrbtmbb/9vb///l5eXrwZXr///y8vL/tmb/1qv/25D/68H//7b//9b//9v//+v///+J44FKAAAACXBIWXMAAB2HAAAdhwGP5fFlAAAgAElEQVR4nO2dDb/kxpWXxRIg8QaSJQY83HjjAMY7Xg8MJLEzMR7Ytj0Tx5v7/T8OanVLK...(line truncated)...
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
