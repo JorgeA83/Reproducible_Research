@@ -1,4 +1,3 @@
-@@ -0,0 +1,98 @@
 ---
 title: "RepData_PeerAssesment1"
 author: "Jorge A Diaz Infante"
